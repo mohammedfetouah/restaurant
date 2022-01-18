@@ -1,0 +1,124 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Source sans pro', 'sans-serif';
+    line-height: 1.625;
+    margin: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: .3s;
+}
+.header {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(54, 54, 54, 0.5) 39.24%, rgba(28, 28, 28, 0.4)),
+        
+        url(img/eggs.jpg) center center / cover no-repeat;
+    color: #fff;
+}
+.topbar {
+    padding: 18px 20px;
+    font-size: .875rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.menu-item:hover {
+    color: #c89446;
+}
+.logo {
+    margin-bottom: 15px ;
+}
+.menu-item {
+    display: inline-block;
+    margin: 0 20px;
+}
+.baseline {
+    padding: 50px 0 70px 0;
+    text-align: center;
+    line-height: 1px;
+
+}
+.baseline-welcome {
+    font-family: 'Pinyon Script', 'serif';
+    color: #c89446;
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 40px;
+}
+.baseline-name {
+    display: block;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 5px;
+    margin-bottom: 28px;
+}
+.baseline-slogan {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+    display: block;
+    letter-spacing: 2px;
+}
+.menu-button {
+    border: 1px solid #c89446;
+    padding: 7px 10px;
+    transition-property: color, background-color ;
+    margin-bottom: 5px;
+}
+.menu-button:hover {
+    background: #c89446;
+    color: #fff;
+
+}
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+    body {
+        background: 
+            linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+            url(/screenshot.png) top center no-repeat;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+    /* .header {
+        background: none;
+    }   test calc l'entete */  
+    .topbar {
+
+        display: flex;
+        align-items: center;
+        max-width: 1150px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .baseline {
+        padding: 155px 0 242px;
+    }
+    .baseline-slogan {
+        font-size: 1.5rem;
+    }
+    .baseline-name {
+        font-size: 4.375rem;
+        letter-spacing: 12px;
+
+    }
+    .baseline-welcome {
+        font-size: 3.75rem;
+    }
+    .menu-button {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}
