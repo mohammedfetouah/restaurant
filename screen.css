@@ -101,6 +101,11 @@ img {
     padding: 0 20px;
     max-width: 960px;
 }
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1150px;
+}
 .block {
     margin-bottom: 50px;
 }
@@ -151,7 +156,78 @@ img {
 .block-centered  {
     text-align: center;
 }
-/* FIN BLOC PRESENTATION MOBILE */
+/* FIN BLOC PRESENTATION MOBILE */ 
+
+
+
+/* DEBUT MENU MOBILE */
+
+.block-centered .block-body {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ingredients-menu {
+    margin: 40px 0;
+    font-weight: 600;
+    color: #383838;
+    text-align: center;
+    text-transform: uppercase;
+}
+.ingredients-menu a {
+    margin: 0 20px;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+.ingredients-menu a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    opacity: 0;
+    background: #c89446;
+    transition: .3s;
+}
+.ingredients-menu .active::after, .ingredients-menu a:hover::after {
+    bottom: 0;
+    opacity: 1;
+
+}
+.menu-summary-item {
+    position: relative;
+    padding-left: 120px;
+    margin-bottom: 30px;
+}
+.menu-summary-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+}
+.menu-summary-title {
+    font-size: 1.125;
+    color: #383838;
+    font-weight: bold;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0;
+}
+.menu-summary p {
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+}
+.menu-summary-price {
+    font-family: 'Pinyon Script', 'Serif';
+    color: #c89446;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+/* FIN MENU MOBILE */
 
 
 @media only screen and (min-width: 600px) {
@@ -202,8 +278,12 @@ img {
     /* FIN L'EN TETE DESKTOP */
 }
 @media only screen and (min-width: 800px) {
+    /* DEBUT BLOC PRESENTATION DESKTOP */
     .block {
         margin-bottom: 100px;
+    }
+    .block-last {
+        margin-bottom: 60px;
     }
     .block-left, .block-right {
         display: flex;
@@ -264,4 +344,63 @@ img {
             fixed top 95px right 0px url(img/oranges.jpg) no-repeat,
             fixed top 640px left 0 url(img/spices.jpg) no-repeat;
     }
+    /* FIN BLOC PRESENTATION DESKTOP */
+
+    /* DEBUT MENU MOBILE */
+    .ingredients-menu a {
+        margin: 0 32px;
+    }
+    .menu-summary {
+        position: relative;
+        padding: 85px 0; 
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+    .menu-summary-item {
+        padding-left: 192px;
+        margin-bottom: 105px;
+        width: calc(50% - 40px)
+    }
+    .menu-summary-item:nth-child(even) {
+        text-align: right;
+        padding-left: 0;
+        padding-right: 192px;
+    }
+    .menu-summary-item:nth-child(even) .menu-summary-img {
+        left: auto;
+        right: 0;
+    }
+    .menu-summary-item:nth-child(even)  .menu-summary-price {
+        margin-left: auto;
+    }
+    .menu-summary-img {
+        width: 160px;
+    }
+    .menu-summary-title {
+        margin-top: 0;
+        line-height: 1.3;
+        background: #fff;
+    }
+    .menu-summary p {
+        background: #fff;
+    }
+    .menu-summary-price {
+        padding-top: 3px;
+        width: 85px;
+        background: #fff;
+    }
+    .menu-summary::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        width: 425px;
+        height: 425px;
+        border: solid 1px #c89446;
+        transform: translate(-50%, -260px) rotate(45deg);
+    }
+    /* FIN MENU MOBILE */
 }
