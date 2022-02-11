@@ -136,12 +136,22 @@ img {
 .more {
     color: #c89446;
 }
-.more:hover{
+.more a:hover{
     text-decoration: underline;
 }
-.more::after {
-    content: '>';
+.more a::after {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-left: 0.7em;
+    background: url(img/arrow-right.svg)  no-repeat;
+    transition: transform .3s;
 }
+.more a:hover::after {
+    transform: translateX(4px);
+}
+
 .block-img {
     max-width: 350px;
     margin: 0 auto;
@@ -253,10 +263,11 @@ img {
     height: 40px;
     color: #fff;
     font-family: 'Source Sans pro', serif;
-    transition: background .3s, border-color .3s;
+    transition: background-color .3s, border-color .3s;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    border-radius: 2px;
 
 }
 .reservation select {
@@ -297,15 +308,66 @@ select option {
 }
 /* FIN RESERVATION MOBILE */
 
+
+/* DEBUT RECETTE ET PLAN MOBILE */
+.recipes {
+    padding: 50px 0;
+    background: no-repeat top left / 80vw auto url(img/news-bg.jpg);
+}
+.recipes .more {
+    margin-top: 60px;
+    text-align: right;
+    display: block;
+}
+.recipes-list {
+    font-weight: 300;
+    font-size: 1.125rem;
+    max-width: 920px;
+    margin-left: auto;
+}
+.recipes-list strong {
+    color: #383838;
+    font-weight: bold;
+}
+.recipes-date strong {
+    font-size: 1.75rem;
+    display: block;
+    line-height: 1.2;
+}
+.recipes-list-item {
+    border-bottom: solid 1px #f2f2f2;
+    margin-top: 1em;
+    padding-bottom: 1em;
+}
+.recipes-list-item:last-child {
+    border-bottom: 0;
+}
+.recipes-list-item {
+    display: flex;
+}
+.recipes-list-item p {
+    margin: 0;
+}
+.recipes-date {
+    width: 60px;
+    flex: none;
+    line-height: 1;
+}
+.map {
+    width: 100%;
+    height: 460px;
+}
+/* FIN RECETTE ET PLAN MOBILE */
+
 @media only screen and (min-width: 600px) {
     html {
         font-size: 16px;
     }
-    body {
-        background: 
-            linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-            url(/screenshot.png) top center no-repeat;
-    }
+        /* body {
+            background: 
+                linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+                url(/screenshot.png) top center no-repeat;
+        } */
 
 
     /* DEBUT L'EN TETE DESKTOP */
@@ -505,4 +567,36 @@ select option {
         width: calc(33.33% - 20px);
     }
     /* FIN RESERVATION DESKTOP */
+
+
+    /* DEBUT RECETTE ET PLAN DESKTOP */
+    .recipes {
+        padding: 30px 0;
+        background-size: 589px auto;
+        background-attachment: fixed;
+    }
+    .recipes .title {
+        text-align: right;
+    }
+    .recipes .container > p {
+        text-align: right;
+        max-width: 716px;
+        margin-left: auto;
+    }
+    .recipes-date {
+        width: 95px;
+    }
+    .recipes-list {
+        margin-top: 42px;
+        margin-bottom: 42px;
+    }
+    .recipes-list-item {
+        margin-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .recipes-list-item:last-child {
+        padding-bottom: 0;
+    }
+    /* FIN RECETTE ET PLAN DESKTOP */
+
 }
