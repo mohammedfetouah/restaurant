@@ -359,6 +359,23 @@ select option {
 }
 /* FIN RECETTE ET PLAN MOBILE */
 
+
+/* DEBUT FOOTER MOBILE */
+.footer {
+    background: #383838 bottom right no-repeat;
+    font-weight: 300;
+    color: #fff;
+    padding: 40px 0;
+}
+.footer-title {
+    color: #c89446;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1.25em;
+}
+/* FIN FOOTER MOBILE */
+
+
 @media only screen and (min-width: 600px) {
     html {
         font-size: 16px;
@@ -598,5 +615,46 @@ select option {
         padding-bottom: 0;
     }
     /* FIN RECETTE ET PLAN DESKTOP */
+
+    /* DEBUT FOOTER DESKTOP */
+    .footer {
+        background-image: url(img/splash.png);
+    }
+    .footer-columns {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-column {
+        width: 300px;
+        flex: none;
+        margin-right: 50px;
+    }
+    .footer-colum:first-child {
+        width: 450px;
+    }
+    .footer-column:last-child {
+        margin-right: 0;
+        flex: none;
+    }
+    .footer a {
+        text-decoration: underline;
+    }
+    .footer a:hover {
+        color: #c89446;
+    }
+    .footer ul {
+        padding-left: 0;
+        list-style: none;
+    }
+    .footer ul li::before {
+        content: '- ';
+    }
+    .footer-credits {
+        font-size: 0.93em;
+    }
+    .footer-credits span {
+        font-weight: bold;
+    }
+    /* FIN FOOTER DESKTOP */
 
 }
